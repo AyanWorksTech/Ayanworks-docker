@@ -8,4 +8,4 @@ before_install:
   - docker build -t ayanworkstech/Ayanworks-docker -f Dockerfile.dev .
 
 script:
-  - docker run -e CI=true ayanworkstech/Ayanworks-docker npm run test
+  - docker run ayanworkstech/Ayanworks-docker npm run test -- --coverage
